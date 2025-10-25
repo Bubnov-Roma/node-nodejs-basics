@@ -13,7 +13,7 @@ export const sendResult = () => {
         const result = nthFibonacci(n);
         parentPort.postMessage({ status: 'resolved', data: result });
     } catch (error) {
-        parentPort.postMessage({ status: 'error', data: 'null' });
+        parentPort.postMessage({ status: 'error', data: null });
     }
 };
 if (parentPort) {

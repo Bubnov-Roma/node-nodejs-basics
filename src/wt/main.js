@@ -25,14 +25,14 @@ export const performCalculations = async () => {
             worker.on('error', () => {
                 resolve({
                     status: 'error',
-                    data: 'null'
+                    data: null
                 });
             });
             worker.on('exit', (code) => {
                 if (code !== 0) {
                     resolve({
                         status: 'error',
-                        data: 'null'
+                        data: null
                     });
                 }
             });
